@@ -15,6 +15,7 @@ public class InteractionModification : MonoBehaviour
     public InputField resizeInputField, transformZInputField, colliderSizeInputField;
     public Dropdown shapeDropdown;
     public Toggle gravityToggle, kinematicsToggle, farManipulationToggle, colliderToggle;
+    public GameObject targetPlane, startPlane;
 
     private PhotonView photonView;
     private List<int> gameObjectIDs;
@@ -38,37 +39,42 @@ public class InteractionModification : MonoBehaviour
             }
         }
         int[] objects = gameObjectIDs.ToArray();
+        int planeID = targetPlane.GetComponent<PhotonView>().ViewID;
+        int startPlaneID = startPlane.GetComponent<PhotonView>().ViewID;
 
         if(PhotonNetwork.IsMasterClient)
         {
             //Debug.Log(gameObjectIDs.Count);
-            photonView.RPC("ModifyObjects", RpcTarget.All, objects, resizeInputField.text, transformZInputField.text, colliderSizeInputField.text, shapeDropdown.options[shapeDropdown.value].text, gravityToggle.isOn, kinematicsToggle.isOn, farManipulationToggle.isOn, colliderToggle.isOn);
+            photonView.RPC("ModifyObjects", RpcTarget.All, objects, planeID, startPlaneID, resizeInputField.text, transformZInputField.text, colliderSizeInputField.text, shapeDropdown.options[shapeDropdown.value].text, gravityToggle.isOn, kinematicsToggle.isOn, farManipulationToggle.isOn, colliderToggle.isOn);
         }
     }
 
     [PunRPC]
-    private void ModifyObjects(int[] gameObjectIDs, string resizeInput, string transformZInput, string colliderInput, string shapeInput, bool gravity, bool kinematics, bool farManipulation, bool collider)
+    private void ModifyObjects(int[] gameObjectIDs, int planeID, int startPlaneID, string resizeInput, string transformZInput, string colliderInput, string shapeInput, bool gravity, bool kinematics, bool farManipulation, bool collider)
     {
         float size = float.Parse(resizeInput);
         float zPosition = float.Parse(transformZInput);
         float colliderSize = float.Parse(colliderInput);
         string shapeName = shapeInput;
         Debug.Log(size + " " + zPosition + " " + colliderSize + " " + shapeName);
-        //Debug.Log("Dropdown value " + shapeName);
+
+        GameObject targetPlane = PhotonNetwork.GetPhotonView(planeID).gameObject;
+        targetPlane.transform.position = new Vector3(targetPlane.transform.position.x, targetPlane.transform.position.y - (colliderSize * size)/2, targetPlane.transform.position.z);
+        GameObject startPlane = PhotonNetwork.GetPhotonView(startPlaneID).gameObject;
+        startPlane.transform.position = new Vector3(startPlane.transform.position.x, startPlane.transform.position.y - (colliderSize * size)/2, startPlane.transform.position.z);
 
         for (int i = 0; i < gameObjectIDs.Length; i++)
         {
             GameObject gameObject = PhotonNetwork.GetPhotonView(gameObjectIDs[i]).gameObject;
-            //Debug.Log(gameObject.name);
-            float additionSize = (size - (float)0.2)/2;
+            //float additionSize = (size - (float)0.2)/2;
             gameObject.transform.localScale = new Vector3(size, size, size);
 
             if (gameObject.name == "SphereGhost" || gameObject.name == "CubeGhost")
             {
-                gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + additionSize, gameObject.transform.position.z);
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
             } else
             {
-                gameObject.transform.position = new Vector3(positionX, gameObject.transform.position.y + additionSize, zPosition);
+                gameObject.transform.position = new Vector3(positionX, gameObject.transform.position.y, zPosition); 
                 ChangeGravityAndKinematics(gameObject, gravity, kinematics);
                 AllowFarManipulation(gameObject, farManipulation);
                 ChangeColliderSize(gameObject, colliderSize);
@@ -120,6 +126,7 @@ public class InteractionModification : MonoBehaviour
         //}
 
         var boxCollider = gameObject.GetComponent<BoxCollider>();
+        boxCollider.enabled = true;
         boxCollider.size = new Vector3(colliderSize, colliderSize, colliderSize);
     }
 

@@ -35,9 +35,5 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         PhotonNetwork.LoadLevel("MenuScene");
     }
 
-    public void OnClickLeaveRoom()
-    {
-        PhotonNetwork.LeaveRoom();
-        PhotonNetwork.LoadLevel("LobbyScene");
-    }
+
 }

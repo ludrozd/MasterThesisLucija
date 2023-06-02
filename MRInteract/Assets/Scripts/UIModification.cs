@@ -46,37 +46,36 @@ public class UIModification : MonoBehaviour
         if (PhotonNetwork.IsMasterClient)
         {
             //Debug.Log(gameObjectIDs.Count);
-            photonView.RPC("SetUIForm", RpcTarget.All, slateID, (object)buttonObjectsID, sliderID, togglesID, scrollViewID);
+            photonView.RPC("SetUIForm", RpcTarget.All, slateID, buttonObjectsID, sliderID, togglesID, scrollViewID, resizeInputField.text, transformZInputField.text, transformYInputField.text, angleInputField.text, sliderMinInputField.text, sliderMaxInputField.text, elasticityInputField.text, decelerationInputField.text, buttonSizeInputField.text, buttonShapeDropdown.options[buttonShapeDropdown.value].text, buttonFeedbackToggle.isOn);
         }
     }
 
     [PunRPC]
-    private void SetUIForm(int slateID, int[] buttonObjectsID, int sliderID, int togglesID, int scrollViewID)
+    private void SetUIForm(int slateID, int[] buttonObjectsID, int sliderID, int togglesID, int scrollViewID, string resizeInput, string transformZInput, string transformYInput, string angleInput, string sliderMinInput, string sliderMaxInput, string elasticityInput, string decelerationInput, string buttonSizeInput, string shapeInput, bool hasFeedback)
     {
-        SetSlateSizeDistanceRotation(slateID);
-        SetButtonShape(buttonObjectsID);
-        ButtonFeedbackAndSize(buttonObjectsID, sliderID, togglesID);
-        MinMaxSlider(sliderID);
-        ScrollSetup(scrollViewID);
+        SetSlateSizeDistanceRotation(slateID, resizeInput, transformZInput, transformYInput, angleInput);
+        SetButtonShape(buttonObjectsID, shapeInput);
+        ButtonFeedbackAndSize(buttonObjectsID, sliderID, togglesID, buttonSizeInput, hasFeedback);
+        MinMaxSlider(sliderID, sliderMinInput, sliderMaxInput);
+        ScrollSetup(scrollViewID, elasticityInput, decelerationInput);
     }
 
-    private void SetSlateSizeDistanceRotation(int slateID)
+    private void SetSlateSizeDistanceRotation(int slateID, string resizeInput, string transformZInput, string transformYInput, string angleInput)
     {
         GameObject slateObj = PhotonNetwork.GetPhotonView(slateID).gameObject;
 
-        float size = float.Parse(resizeInputField.text);
-        float zPosition = float.Parse(transformZInputField.text);
-        float yPosition = float.Parse(transformYInputField.text);
-        float anglePanel = float.Parse(angleInputField.text);
+        float size = float.Parse(resizeInput);
+        float zPosition = float.Parse(transformZInput);
+        float yPosition = float.Parse(transformYInput);
+        float anglePanel = float.Parse(angleInput);
 
         slateObj.transform.localScale = new Vector3(size, size, size);
         slateObj.transform.position = new Vector3(slateObj.transform.position.x, yPosition, zPosition);
         slateObj.transform.Rotate(anglePanel, slateObj.transform.rotation.y, slateObj.transform.rotation.z);
     }
 
-    private void SetButtonShape(int[] buttonObjectsID)
+    private void SetButtonShape(int[] buttonObjectsID, string shapeName)
     {
-        string shapeName = buttonShapeDropdown.options[buttonShapeDropdown.value].text;
 
         foreach (int buttonSetID in buttonObjectsID)
         {
@@ -102,9 +101,9 @@ public class UIModification : MonoBehaviour
 
     }
 
-    private void ButtonFeedbackAndSize(int[] buttonObjectsID, int sliderID, int togglesID)
+    private void ButtonFeedbackAndSize(int[] buttonObjectsID, int sliderID, int togglesID, string buttonSize, bool hasFeedback)
     {
-        float btnSize = float.Parse(buttonSizeInputField.text);
+        float btnSize = float.Parse(buttonSize);
 
         foreach (int buttonSetID in buttonObjectsID)
         {
@@ -113,7 +112,7 @@ public class UIModification : MonoBehaviour
 
             foreach (Button button in buttons)
             {
-                if(buttonFeedbackToggle.isOn == false)
+                if(hasFeedback == false)
                 {
                     button.transition = Selectable.Transition.None;
                 }
@@ -124,38 +123,38 @@ public class UIModification : MonoBehaviour
 
         Slider sliderObj = PhotonNetwork.GetPhotonView(sliderID).GetComponent<Slider>();
 
-        if (buttonFeedbackToggle.isOn == false)
+        if (hasFeedback == false)
         {
             sliderObj.transition = Selectable.Transition.None;
         }
 
-        GameObject toggleSet = PhotonNetwork.GetPhotonView(togglesID).gameObject;
+        //GameObject toggleSet = PhotonNetwork.GetPhotonView(togglesID).gameObject;
 
-        Toggle[] toggleButtons = toggleSet.GetComponentsInChildren<Toggle>();
-        foreach(Toggle toggle in toggleButtons)
-        {
-            if (buttonFeedbackToggle.isOn == false)
-            {
-                toggle.transition = Selectable.Transition.None;
-            }
-        }
+        //Toggle[] toggleButtons = toggleSet.GetComponentsInChildren<Toggle>();
+        //foreach(Toggle toggle in toggleButtons)
+        //{
+        //    if (hasFeedback == false)
+        //    {
+        //        toggle.transition = Selectable.Transition.None;
+        //    }
+        //}
     }
 
-    private void MinMaxSlider(int sliderID)
+    private void MinMaxSlider(int sliderID, string sliderMinInput, string sliderMaxInput)
     {
         Slider sliderObj = PhotonNetwork.GetPhotonView(sliderID).GetComponent<Slider>();
 
-        int minValue = int.Parse(sliderMinInputField.text);
-        int maxValue = int.Parse(sliderMaxInputField.text);
+        int minValue = int.Parse(sliderMinInput);
+        int maxValue = int.Parse(sliderMaxInput);
 
         sliderObj.minValue = minValue;
         sliderObj.maxValue = maxValue;
     }
 
-    private void ScrollSetup(int scrollViewID)
+    private void ScrollSetup(int scrollViewID, string elasticityInput, string decelerationInput)
     {
-        float elasticity = float.Parse(elasticityInputField.text);
-        float deceleration = float.Parse(decelerationInputField.text);
+        float elasticity = float.Parse(elasticityInput);
+        float deceleration = float.Parse(decelerationInput);
 
         GameObject scrollViewObj = PhotonNetwork.GetPhotonView(scrollViewID).gameObject;
 

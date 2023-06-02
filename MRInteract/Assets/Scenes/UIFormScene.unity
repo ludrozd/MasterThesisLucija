@@ -4936,8 +4936,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 6.5000334, y: -319}
-  m_SizeDelta: {x: 750, y: 80}
+  m_AnchoredPosition: {x: 6.5000305, y: -367.9}
+  m_SizeDelta: {x: 750, y: 164.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &421366754
 MonoBehaviour:
@@ -4959,12 +4959,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Neki tekst Neki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki
-    tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki
-    tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki
-    tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekst
-
-'
+  m_text: Aenean dictum urna in blandit blandit. Nunc pretium porttitor arcu. Interdum
+    et malesuada fames ac ante ipsum primis in faucibus. Proin consectetur nunc justo,
+    at vestibulum mi scelerisque eget. Pellentesque id viverra est, rutrum vulputate
+    velit. Pellentesque quis dui quis libero ultrices blandit. Cras tristique scelerisque
+    est vitae varius. Integer euismod imperdiet orci ac sagittis.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
   m_sharedMaterial: {fileID: 21202819797275496, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -4999,7 +4998,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -5727,8 +5726,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 927205371}
   m_HandleRect: {fileID: 927205370}
   m_Direction: 2
-  m_Value: 1.0000007
-  m_Size: 0.45130664
+  m_Value: 1.0000017
+  m_Size: 0.45130447
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6590,7 +6589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -1.4498901, y: -726}
+  m_AnchoredPosition: {x: -1.4498901, y: -873}
   m_SizeDelta: {x: 750, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &544578616
@@ -8375,7 +8374,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -447}
+  m_AnchoredPosition: {x: 0, y: -538}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &696114422
@@ -9373,7 +9372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000045776367, y: -0.00037824985}
+  m_AnchoredPosition: {x: -0.000045776367, y: -0.00091441104}
   m_SizeDelta: {x: 0, y: 1000}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &803627511
@@ -12353,7 +12352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 6.5000334, y: -84}
+  m_AnchoredPosition: {x: 6.5000334, y: -71}
   m_SizeDelta: {x: 750, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1059883416
@@ -12376,12 +12375,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Neki tekst Neki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki
-    tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki
-    tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki
-    tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekst
-
-'
+  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit
+    amet aliquam tellus, vel accumsan lacus. Nullam quis diam sed purus laoreet pulvinar
+    at convallis turpis. Proin cursus mi mauris, non fringilla velit ullamcorper
+    id. Donec nec nisl nibh. Ut non felis lacinia, hendrerit eros ac, laoreet nibh.
+    Fusce venenatis condimentum dui eget venenatis. Proin nec libero justo. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
   m_sharedMaterial: {fileID: 21202819797275496, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -13524,7 +13522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -400}
+  m_AnchoredPosition: {x: 0, y: -417}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1199935963
@@ -15568,8 +15566,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 6.5000334, y: -591}
-  m_SizeDelta: {x: 750, y: 150}
+  m_AnchoredPosition: {x: 6.5000334, y: -694.3}
+  m_SizeDelta: {x: 750, y: 229}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1348089144
 MonoBehaviour:
@@ -15591,12 +15589,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Neki tekst Neki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki
-    tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki
-    tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki
-    tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekstNeki tekst
-
-'
+  m_text: Sed volutpat nisl sit amet tortor consectetur, vitae commodo ligula maximus.
+    Fusce vestibulum, turpis ac semper mattis, augue mauris accumsan sem, in hendrerit
+    dolor felis non quam. Pellentesque habitant morbi tristique senectus et netus
+    et malesuada fames ac turpis egestas. Aliquam vel nunc vitae urna auctor mattis
+    ac id nibh. Cras vestibulum tempus ullamcorper.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
   m_sharedMaterial: {fileID: 21202819797275496, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -17964,7 +17961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1059883416}
-  text_color: {r: 0.9811321, g: 0.9438647, b: 0.27305093, a: 1}
+  text_color: {r: 0.990566, g: 0.9711096, b: 0.1254902, a: 1}
 --- !u!224 &1550015900
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19417,7 +19414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1059883416}
-  text_color: {r: 0.62661546, g: 1, b: 0.5707547, a: 1}
+  text_color: {r: 0, g: 0, b: 0, a: 1}
 --- !u!224 &1757031017
 RectTransform:
   m_ObjectHideFlags: 0

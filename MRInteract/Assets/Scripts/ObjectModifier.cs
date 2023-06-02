@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using static System.Net.Mime.MediaTypeNames;
 
 public class ObjectModifier : MonoBehaviour
 {
@@ -40,28 +41,28 @@ public class ObjectModifier : MonoBehaviour
         if (PhotonNetwork.IsMasterClient)
         {
             //Debug.Log(gameObjectIDs.Count);
-            photonView.RPC("ModifyObjects", RpcTarget.All, (object)objects);
+            photonView.RPC("ModifyManipulatedObjects", RpcTarget.All, objects, resizeInputField.text, ghostResizeInputField.text, transformZInputField.text, transformYInputField.text, rotateXInputField.text, rotateYInputField.text, colliderSizeInputField.text, shapeDropdown.options[shapeDropdown.value].text, farManipulationToggle.isOn, colliderToggle.isOn);
         }
     }
 
     [PunRPC]
-    private void ModifyObjects(int[] gameobjectIDs)
+    private void ModifyManipulatedObjects(int[] gameobjectIDs, string resizeInput, string ghostResizeInput, string transformZInput, string transformYInput, string rotateXInput, string rotateYInput, string colliderSizeInput, string shapeInput, bool hasFarManipulation, bool hasCollider)
     {
-        float size = float.Parse(resizeInputField.text);
-        float ghostSize = float.Parse(ghostResizeInputField.text);
-        float zPosition = float.Parse(transformZInputField.text);
-        float yPosition = float.Parse(transformYInputField.text);
-        float xRotate = float.Parse(rotateXInputField.text);
-        float yRotate = float.Parse(rotateYInputField.text);
-        float colliderSize = float.Parse(colliderSizeInputField.text);
-        string shapeName = shapeDropdown.options[shapeDropdown.value].text;
+        float size = float.Parse(resizeInput);
+        float ghostSize = float.Parse(ghostResizeInput);
+        float zPosition = float.Parse(transformZInput);
+        float yPosition = float.Parse(transformYInput);
+        float xRotate = float.Parse(rotateXInput);
+        float yRotate = float.Parse(rotateYInput);
+        float colliderSize = float.Parse(colliderSizeInput);
+        string shapeName = shapeInput;
         //Debug.Log("Dropdown value " + shapeName);
 
         for (int i = 0; i < gameobjectIDs.Length; i++)
         {
-            GameObject gameObject = PhotonNetwork.GetPhotonView(gameObjectIDs[i]).gameObject;
+            GameObject gameObject = PhotonNetwork.GetPhotonView(gameobjectIDs[i]).gameObject;
 
-            if (gameObject.name == shapeName+"Ghost")
+            if (gameObject.name == shapeName + "Ghost")
             {
                 gameObject.transform.localRotation = Quaternion.Euler(xRotate, yRotate, gameObject.transform.localRotation.z);
                 gameObject.transform.localScale = new Vector3(ghostSize, ghostSize, ghostSize);
@@ -73,8 +74,8 @@ public class ObjectModifier : MonoBehaviour
                 gameObject.transform.position = new Vector3(positionX, yPosition, zPosition);
                 gameObject.transform.localScale = new Vector3(size, size, size);
                 ChangeColliderSize(gameObject, colliderSize);
-                SetColliderBounds(gameObject);
-                AllowFarManipulation(gameObject);
+                SetColliderBounds(gameObject, hasCollider);
+                AllowFarManipulation(gameObject, hasFarManipulation);
             }
 
             SetObjectShape(gameObject, shapeName);
@@ -83,7 +84,7 @@ public class ObjectModifier : MonoBehaviour
 
     private void SetObjectShape(GameObject gameObject, string shapeName)
     {
-        if (!(shapeName.Equals("Cube") && gameObject.name.StartsWith("Cube") || shapeName.Equals("Sphere") && gameObject.name.StartsWith("Sphere")))
+        if (!(shapeName.Equals("Cube") && gameObject.name.StartsWith("Cube") || shapeName.Equals("Cylinder") && gameObject.name.StartsWith("Cylinder")))
         {
             gameObject.SetActive(false);
         }
@@ -93,21 +94,28 @@ public class ObjectModifier : MonoBehaviour
         }
     }
 
-    private void AllowFarManipulation(GameObject gameObject)
+    private void AllowFarManipulation(GameObject gameObject, bool hasFarManipulation)
     {
         var objectManipulator = gameObject.GetComponent<ObjectManipulator>();
-        objectManipulator.AllowFarManipulation = farManipulationToggle.isOn;
+        objectManipulator.AllowFarManipulation = hasFarManipulation;
     }
 
     private void ChangeColliderSize(GameObject gameObject, float colliderSize)
     {
         var boxCollider = gameObject.GetComponent<BoxCollider>();
-        boxCollider.size = new Vector3(colliderSize, colliderSize, colliderSize);
+        if(gameObject.name == "Cube")
+        {
+            boxCollider.size = new Vector3(colliderSize, colliderSize, colliderSize);
+        } else if (gameObject.name == "Cylinder")
+        {
+            boxCollider.size = new Vector3(colliderSize, colliderSize * 2, colliderSize);
+        }
+
     }
 
-    private void SetColliderBounds(GameObject gameObject)
+    private void SetColliderBounds(GameObject gameObject, bool hasCollider)
     {
         var boundsControl = gameObject.GetComponent<BoundsControl>();
-        boundsControl.enabled = colliderToggle.isOn;
+        boundsControl.enabled = hasCollider;
     }
 }
