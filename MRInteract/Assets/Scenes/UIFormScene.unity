@@ -815,6 +815,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &124860288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3008,6 +3020,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &325920883
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3733,6 +3757,18 @@ MonoBehaviour:
       - m_Target: {fileID: 722693453}
         m_TargetAssemblyTypeName: FontText, Assembly-CSharp
         m_MethodName: ChangeFontOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4592,6 +4628,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1823155912}
         m_TargetAssemblyTypeName: ColorText, Assembly-CSharp
         m_MethodName: ChangeColorOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5636,6 +5684,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &441564479
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5727,7 +5787,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 927205370}
   m_Direction: 2
   m_Value: 1.0000017
-  m_Size: 0.45130447
+  m_Size: 0.4513066
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6381,6 +6441,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1757031016}
         m_TargetAssemblyTypeName: ColorText, Assembly-CSharp
         m_MethodName: ChangeColorOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8254,6 +8326,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1757031016}
         m_TargetAssemblyTypeName: ColorText, Assembly-CSharp
         m_MethodName: ChangeColorOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10276,6 +10360,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &873874245
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10416,6 +10512,18 @@ MonoBehaviour:
       - m_Target: {fileID: 291663095}
         m_TargetAssemblyTypeName: FontText, Assembly-CSharp
         m_MethodName: ChangeFontOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10870,6 +10978,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1823155912}
         m_TargetAssemblyTypeName: ColorText, Assembly-CSharp
         m_MethodName: ChangeColorOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12309,6 +12429,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1050080286
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13539,6 +13671,7 @@ GameObject:
   - component: {fileID: 1199935967}
   - component: {fileID: 1199935968}
   - component: {fileID: 1199935969}
+  - component: {fileID: 1199935970}
   m_Layer: 5
   m_Name: ScriptManager
   m_TagString: Untagged
@@ -13643,9 +13776,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1199935963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3603c821fc3e554986b07ad033ea7eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a0cb9b491d06d0489f6b50f5a780908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberOfScene: 2
 --- !u!114 &1199935969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13659,6 +13793,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pcCanvas: {fileID: 592520995}
+--- !u!114 &1199935970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199935963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4916bd1f6a47ccc4fa1ef1eea6220f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputParameters:
+  - tmpText: {fileID: 1806151486}
+    inputText: {fileID: 1415240864}
+  - tmpText: {fileID: 1073426481}
+    inputText: {fileID: 302306777}
+  - tmpText: {fileID: 1363439678}
+    inputText: {fileID: 1084581784}
+  - tmpText: {fileID: 155919353}
+    inputText: {fileID: 2088744}
+  - tmpText: {fileID: 663409258}
+    inputText: {fileID: 420296555}
+  - tmpText: {fileID: 230151092}
+    inputText: {fileID: 1654621497}
+  - tmpText: {fileID: 230151092}
+    inputText: {fileID: 267875167}
+  - tmpText: {fileID: 1135289128}
+    inputText: {fileID: 1168311522}
+  - tmpText: {fileID: 1404080889}
+    inputText: {fileID: 942315737}
+  toggleParameters:
+  - tmpText: {fileID: 125418783}
+    toggle: {fileID: 1815538584}
+  dropdownParameter:
+    tmpText: {fileID: 1843720233}
+    dropdown: {fileID: 967519017}
 --- !u!1 &1246827457
 GameObject:
   m_ObjectHideFlags: 0
@@ -14265,6 +14436,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1251939062
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14359,6 +14542,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1199935965}
         m_TargetAssemblyTypeName: UIModification, Assembly-CSharp
         m_MethodName: ApplyOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1199935970}
+        m_TargetAssemblyTypeName: ParametersExport, Assembly-CSharp
+        m_MethodName: ExportParameters
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14624,6 +14819,30 @@ MonoBehaviour:
       - m_Target: {fileID: 1199935967}
         m_TargetAssemblyTypeName: PanelCloser, Assembly-CSharp
         m_MethodName: CloseOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: StartTimeMeasure
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: StartClickCount
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15153,6 +15372,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1550015899}
         m_TargetAssemblyTypeName: ColorText, Assembly-CSharp
         m_MethodName: ChangeColorOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16083,6 +16314,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1550015899}
         m_TargetAssemblyTypeName: ColorText, Assembly-CSharp
         m_MethodName: ChangeColorOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17030,6 +17273,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1455756620
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17788,6 +18043,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1535346561
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18171,6 +18438,18 @@ MonoBehaviour:
       - m_Target: {fileID: 722693453}
         m_TargetAssemblyTypeName: FontText, Assembly-CSharp
         m_MethodName: ChangeFontOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19414,7 +19693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1059883416}
-  text_color: {r: 0, g: 0, b: 0, a: 1}
+  text_color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!224 &1757031017
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19806,6 +20085,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1823155912}
         m_TargetAssemblyTypeName: ColorText, Assembly-CSharp
         m_MethodName: ChangeColorOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1199935968}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: IncreaseClickCount
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20266,7 +20557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1059883416}
-  text_color: {r: 1, g: 1, b: 1, a: 1}
+  text_color: {r: 0.52156866, g: 1, b: 1, a: 1}
 --- !u!224 &1823155913
 RectTransform:
   m_ObjectHideFlags: 0
