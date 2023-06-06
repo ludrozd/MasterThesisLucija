@@ -59,7 +59,15 @@ public class InteractionModification : MonoBehaviour
         Debug.Log(size + " " + zPosition + " " + colliderSize + " " + shapeName);
 
         GameObject targetPlane = PhotonNetwork.GetPhotonView(planeID).gameObject;
-        targetPlane.transform.position = new Vector3(targetPlane.transform.position.x, targetPlane.transform.position.y - (colliderSize * size)/2, targetPlane.transform.position.z);
+        if (collider)
+        {
+            targetPlane.transform.position = new Vector3(targetPlane.transform.position.x, targetPlane.transform.position.y - (colliderSize * size) / 2 - (float)0.015, targetPlane.transform.position.z);
+        }
+        else
+        {
+            targetPlane.transform.position = new Vector3(targetPlane.transform.position.x, targetPlane.transform.position.y - (colliderSize * size) / 2, targetPlane.transform.position.z);
+        }
+        
         GameObject startPlane = PhotonNetwork.GetPhotonView(startPlaneID).gameObject;
         startPlane.transform.position = new Vector3(startPlane.transform.position.x, startPlane.transform.position.y - (colliderSize * size)/2, startPlane.transform.position.z);
 

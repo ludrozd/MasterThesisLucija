@@ -7,9 +7,7 @@ public class LeaveRoom : MonoBehaviour
 {
     public void OnClickLeaveRoom()
     {
-        if (PhotonNetwork.IsMasterClient)
-        {
-            PhotonNetwork.LoadLevel("LobbyScene");
-        }
+        PhotonNetwork.LeaveRoom();
+        PhotonNetwork.LoadLevel("LobbyScene");
     }
 }
