@@ -12,12 +12,12 @@ public class CanvasManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
+#if UNITY_STANDALONE_WIN  || UNITY_EDITOR_WIN
         pcCanvas.gameObject.SetActive(true);
         //eventSystem.gameObject.SetActive(true);
         holoCanvas.gameObject.SetActive(false);
         //camera.GetComponent<EventSystem>().enabled = false;
-#elif UNITY_UWP 
+#elif UNITY_UWP
         pcCanvas.gameObject.SetActive(false);
         //eventSystem.gameObject.SetActive(false);
         holoCanvas.gameObject.SetActive(true);

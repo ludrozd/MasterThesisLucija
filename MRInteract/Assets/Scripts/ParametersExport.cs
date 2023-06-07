@@ -43,20 +43,25 @@ public class ParametersExport : MonoBehaviour
         StreamWriter writer = new StreamWriter(path, true);
         writer.WriteLine("Input parameters for the scenario:");
         writer.WriteLine();
-        
+
         bool minWritten = false;
-        foreach(InputParameter ip in inputParameters)
-        {   
-            if(ip.tmpText.text == "Slider Values:" && minWritten == false) {
+        foreach (InputParameter ip in inputParameters)
+        {
+            if (ip.tmpText.text == "Slider Values:" && minWritten == false)
+            {
                 writer.WriteLine("Slider min value: " + ip.inputText.text);
                 minWritten = true;
-            } else if (ip.tmpText.text == "Slider Values:" && minWritten == true) {
+            }
+            else if (ip.tmpText.text == "Slider Values:" && minWritten == true)
+            {
                 writer.WriteLine("Slider max value: " + ip.inputText.text);
-            } else {
+            }
+            else
+            {
                 writer.WriteLine(ip.tmpText.text + " " + ip.inputText.text);
             }
         }
-        foreach(ToggleParameter tp in toggleParameters)
+        foreach (ToggleParameter tp in toggleParameters)
         {
             writer.WriteLine(tp.tmpText.text + " " + tp.toggle.isOn.ToString());
         }

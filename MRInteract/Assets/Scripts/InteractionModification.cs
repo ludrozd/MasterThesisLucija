@@ -61,7 +61,7 @@ public class InteractionModification : MonoBehaviour
         GameObject targetPlane = PhotonNetwork.GetPhotonView(planeID).gameObject;
         if (collider)
         {
-            targetPlane.transform.position = new Vector3(targetPlane.transform.position.x, targetPlane.transform.position.y - (colliderSize * size) / 2 - (float)0.015, targetPlane.transform.position.z);
+            targetPlane.transform.position = new Vector3(targetPlane.transform.position.x, targetPlane.transform.position.y - (colliderSize * size) / 2, targetPlane.transform.position.z);
         }
         else
         {

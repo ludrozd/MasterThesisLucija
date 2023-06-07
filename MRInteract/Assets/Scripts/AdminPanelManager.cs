@@ -10,7 +10,7 @@ public class AdminPanelManager : MonoBehaviour
     {
 #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
         pcCanvas.gameObject.SetActive(true);
-#elif UNITY_UWP 
+#elif UNITY_UWP
         pcCanvas.gameObject.SetActive(false);
 #endif
     }

@@ -1300,9 +1300,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Cube
-      m_Image: {fileID: 0}
     - m_Text: Sphere
+      m_Image: {fileID: 0}
+    - m_Text: Cube
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2330,7 +2330,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cube
+  m_Text: Sphere
 --- !u!222 &941427881
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3509,7 +3509,6 @@ GameObject:
   - component: {fileID: 1331996702}
   - component: {fileID: 1331996704}
   - component: {fileID: 1331996703}
-  - component: {fileID: 1331996706}
   - component: {fileID: 1331996705}
   m_Layer: 0
   m_Name: Sphere
@@ -3789,23 +3788,6 @@ MonoBehaviour:
   scaleMinimum: 1
   scaleMaximum: 1
   relativeToInitialState: 1
---- !u!114 &1331996706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331996693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b3e6359c9750ad4fb8a05c9b8704d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handType: 3
-  proximityType: 3
-  executionOrder: 0
-  constraintOnRotation: -1
-  useLocalSpaceForConstraint: 0
 --- !u!1 &1339365114
 GameObject:
   m_ObjectHideFlags: 0
@@ -4328,7 +4310,6 @@ GameObject:
   - component: {fileID: 1552146944}
   - component: {fileID: 1552146946}
   - component: {fileID: 1552146945}
-  - component: {fileID: 1552146948}
   - component: {fileID: 1552146947}
   m_Layer: 0
   m_Name: Cube
@@ -4608,23 +4589,6 @@ MonoBehaviour:
   scaleMinimum: 1
   scaleMaximum: 1
   relativeToInitialState: 1
---- !u!114 &1552146948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552146935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b3e6359c9750ad4fb8a05c9b8704d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handType: 3
-  proximityType: 3
-  executionOrder: 0
-  constraintOnRotation: -1
-  useLocalSpaceForConstraint: 0
 --- !u!1 &1635637997
 GameObject:
   m_ObjectHideFlags: 0
@@ -6639,7 +6603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d9acc7968244a8886f3af591305bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeProfile: {fileID: 11400000, guid: e67a6324aae62794ead14af1150ba37f, type: 2}
+  activeProfile: {fileID: 11400000, guid: 31b1e50aa296e384ba195d01bdb3e2d4, type: 2}
 --- !u!4 &2077300176
 Transform:
   m_ObjectHideFlags: 0
