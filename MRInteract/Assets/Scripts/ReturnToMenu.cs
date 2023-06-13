@@ -13,7 +13,6 @@ public class ReturnToMenu : MonoBehaviour
     private float distance;
     private float scale;
     private Quaternion rotation;
-    //private int count;
 
     private void Start()
     {
@@ -42,15 +41,6 @@ public class ReturnToMenu : MonoBehaviour
         startTime = System.DateTime.UtcNow;
     }
 
-    //public void StartClickCount()
-    //{
-    //    count = 0;
-    //}
-
-    //public void IncreaseClickCount()
-    //{
-    //    count += 1;
-    //}
 
     private void Scene1ObjectiveMeasuresExport()
     {
@@ -66,10 +56,12 @@ public class ReturnToMenu : MonoBehaviour
         } else if (sphere != null)
         {
             GameObject sphereGhost = GameObject.Find("SphereGhost");
-            distance = Vector3.Distance(cube.transform.position, sphereGhost.transform.position);
+            distance = Vector3.Distance(sphere.transform.position, sphereGhost.transform.position);
         }
 
-        string path = "C:\\Users\\Korisnica\\Desktop\\MRInteract_Resources\\ObjectiveParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
+        string path = Directory.GetCurrentDirectory();
+        path += "\\MRInteract_Resources\\ObjectiveParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
+        //string path = "C:\\Users\\Korisnica\\Desktop\\MRInteract_Resources\\ObjectiveParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
         StreamWriter writer = new StreamWriter(path, true);
         writer.WriteLine("Objective parameters for the Pick And Place scenario:");
         writer.WriteLine();
@@ -89,12 +81,13 @@ public class ReturnToMenu : MonoBehaviour
         string font = fontText.font.name;
         string size = sizeText.fontSize.ToString();
 
-        string path = "C:\\Users\\Korisnica\\Desktop\\MRInteract_Resources\\ObjectiveParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
+        //string path = "C:\\Users\\Korisnica\\Desktop\\MRInteract_Resources\\ObjectiveParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
+        string path = Directory.GetCurrentDirectory();
+        path += "\\MRInteract_Resources\\ObjectiveParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
         StreamWriter writer = new StreamWriter(path, true);
         writer.WriteLine("Objective parameters for the UI Form scenario:");
         writer.WriteLine();
         writer.WriteLine("Time passed (in seconds): " + timePassed);
-        //writer.WriteLine("Nuber of button clicks: " + count);
         writer.WriteLine("Preferable color for text: " + color);
         writer.WriteLine("Preferable font type for text: " + font);
         writer.WriteLine("Preferable font size for text: " + size);
@@ -124,7 +117,9 @@ public class ReturnToMenu : MonoBehaviour
         }
         Vector3 differenceEulerAngles = rotation.eulerAngles;
 
-        string path = "C:\\Users\\Korisnica\\Desktop\\MRInteract_Resources\\ObjectiveParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
+        //string path = "C:\\Users\\Korisnica\\Desktop\\MRInteract_Resources\\ObjectiveParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
+        string path = Directory.GetCurrentDirectory();
+        path += "\\MRInteract_Resources\\ObjectiveParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
         StreamWriter writer = new StreamWriter(path, true);
         writer.WriteLine("Objective parameters for the Scale and Rotate scenario:");
         writer.WriteLine();

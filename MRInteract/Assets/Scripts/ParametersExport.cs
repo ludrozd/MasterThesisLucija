@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using static ParametersExport;
 
 public class ParametersExport : MonoBehaviour
 {
@@ -38,7 +39,10 @@ public class ParametersExport : MonoBehaviour
     {
         Debug.Log("Exporting...");
         Debug.Log("Room name: " + PhotonNetwork.CurrentRoom.Name);
-        string path = "C:\\Users\\Korisnica\\Desktop\\MRInteract_Resources\\InputParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
+        //string path = "C:\\Users\\Korisnica\\Desktop\\MRInteract_Resources\\InputParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
+        string path = Directory.GetCurrentDirectory();
+        path += "\\MRInteract_Resources\\InputParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
+
 
         StreamWriter writer = new StreamWriter(path, true);
         writer.WriteLine("Input parameters for the scenario:");
@@ -49,12 +53,12 @@ public class ParametersExport : MonoBehaviour
         {
             if (ip.tmpText.text == "Slider Values:" && minWritten == false)
             {
-                writer.WriteLine("Slider min value: " + ip.inputText.text);
+                writer.WriteLine("Slider Min Value: " + ip.inputText.text);
                 minWritten = true;
             }
             else if (ip.tmpText.text == "Slider Values:" && minWritten == true)
             {
-                writer.WriteLine("Slider max value: " + ip.inputText.text);
+                writer.WriteLine("Slider Max Value: " + ip.inputText.text);
             }
             else
             {
