@@ -846,13 +846,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1859358012}
-  - {fileID: 229734108}
+  - {fileID: 1030028475}
   - {fileID: 946415003}
   - {fileID: 1665577684}
   - {fileID: 228901158}
   - {fileID: 1075392187}
-  - {fileID: 1030028475}
+  - {fileID: 1859358012}
+  - {fileID: 229734108}
   - {fileID: 312520312}
   - {fileID: 1841511418}
   - {fileID: 2018544008}
@@ -1293,7 +1293,7 @@ RectTransform:
   - {fileID: 642963630}
   - {fileID: 53286798}
   m_Father: {fileID: 92113092}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -1330,7 +1330,7 @@ RectTransform:
   - {fileID: 1819221174}
   - {fileID: 984231901}
   m_Father: {fileID: 92113092}
-  m_RootOrder: 1
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -2087,7 +2087,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: min 1 - max ...
+  m_Text: min 1 - max 1.5
 --- !u!222 &495500829
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3453,7 +3453,7 @@ RectTransform:
   - {fileID: 952067762}
   - {fileID: 343018585}
   m_Father: {fileID: 92113092}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -4085,7 +4085,7 @@ RectTransform:
   - {fileID: 1149622839}
   - {fileID: 1305464201}
   m_Father: {fileID: 92113092}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -4176,7 +4176,7 @@ RectTransform:
   - {fileID: 593751443}
   - {fileID: 1557329870}
   m_Father: {fileID: 92113092}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -6012,7 +6012,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: min 0 - max 1,5
+  m_Text: min 0 - max 1.5
 --- !u!222 &1557248978
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6343,7 +6343,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: min -0,5 - max 1
+  m_Text: min -1 - max 0.5
 --- !u!222 &1580310643
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6536,7 +6536,7 @@ RectTransform:
   - {fileID: 43342936}
   - {fileID: 1164038252}
   m_Father: {fileID: 92113092}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -6594,7 +6594,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: min 0,01-max 0,6
+  m_Text: min 0.01-max 0.4
 --- !u!222 &1711773607
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7381,7 +7381,7 @@ RectTransform:
   - {fileID: 775879762}
   - {fileID: 1994573348}
   m_Father: {fileID: 92113092}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -8070,7 +8070,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: min 0,01-max 0,6
+  m_Text: min 0.01-max 0.4
 --- !u!222 &2101061368
 CanvasRenderer:
   m_ObjectHideFlags: 0

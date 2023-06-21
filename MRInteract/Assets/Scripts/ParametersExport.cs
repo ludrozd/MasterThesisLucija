@@ -37,13 +37,8 @@ public class ParametersExport : MonoBehaviour
 
     public void ExportParameters()
     {
-        Debug.Log("Exporting...");
-        Debug.Log("Room name: " + PhotonNetwork.CurrentRoom.Name);
-        //string path = "C:\\Users\\Korisnica\\Desktop\\MRInteract_Resources\\InputParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
         string path = Directory.GetCurrentDirectory();
         path += "\\MRInteract_Resources\\InputParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
-
-
         StreamWriter writer = new StreamWriter(path, true);
         writer.WriteLine("Input parameters for the scenario:");
         writer.WriteLine();

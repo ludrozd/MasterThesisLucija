@@ -24,8 +24,6 @@ public class UIModification : MonoBehaviour
 
     public void ApplyOnClick()
     {
-        //PhotonView[] views = FindObjectsOfType<PhotonView>();
-        //Debug.Log(views.Length);
         buttonSetIDs = new List<int>();
 
         foreach (GameObject gameObject in buttonSets)
@@ -43,7 +41,6 @@ public class UIModification : MonoBehaviour
 
         if (PhotonNetwork.IsMasterClient)
         {
-            //Debug.Log(gameObjectIDs.Count);
             photonView.RPC("SetUIForm", RpcTarget.All, slateID, buttonObjectsID, sliderID, scrollViewID, resizeInputField.text, transformZInputField.text, transformYInputField.text, angleInputField.text, sliderMinInputField.text, sliderMaxInputField.text, elasticityInputField.text, decelerationInputField.text, buttonSizeInputField.text, buttonShapeDropdown.options[buttonShapeDropdown.value].text, buttonFeedbackToggle.isOn);
         }
     }

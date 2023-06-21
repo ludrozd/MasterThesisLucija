@@ -1,0 +1,4 @@
+Objective parameters for the Pick And Place scenario:
+
+Time passed (in seconds): 38
+Object position difference: 0,901731

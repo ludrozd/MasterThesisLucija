@@ -10,11 +10,6 @@ public class SceneChanger : MonoBehaviour
     public int level;
     public Text buttonText;
 
-    //private void Start()
-    //{
-    //    PhotonNetwork.AutomaticallySyncScene = true;
-    //}
-
     public void ChangeScene()
     {
         if (PhotonNetwork.IsMasterClient)

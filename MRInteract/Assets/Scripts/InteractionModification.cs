@@ -27,8 +27,6 @@ public class InteractionModification : MonoBehaviour
 
     public void ApplyOnClick()
     {
-        //PhotonView[] views = FindObjectsOfType<PhotonView>();
-        //Debug.Log(views.Length);
         gameObjectIDs = new List<int>();
 
         foreach (GameObject gameObject in gameObjects){
@@ -44,7 +42,6 @@ public class InteractionModification : MonoBehaviour
 
         if(PhotonNetwork.IsMasterClient)
         {
-            //Debug.Log(gameObjectIDs.Count);
             photonView.RPC("ModifyObjects", RpcTarget.All, objects, planeID, startPlaneID, resizeInputField.text, transformZInputField.text, colliderSizeInputField.text, shapeDropdown.options[shapeDropdown.value].text, gravityToggle.isOn, kinematicsToggle.isOn, farManipulationToggle.isOn, colliderToggle.isOn);
         }
     }
@@ -56,7 +53,6 @@ public class InteractionModification : MonoBehaviour
         float zPosition = float.Parse(transformZInput);
         float colliderSize = float.Parse(colliderInput);
         string shapeName = shapeInput;
-        Debug.Log(size + " " + zPosition + " " + colliderSize + " " + shapeName);
 
         GameObject targetPlane = PhotonNetwork.GetPhotonView(planeID).gameObject;
         if (collider)
@@ -74,7 +70,6 @@ public class InteractionModification : MonoBehaviour
         for (int i = 0; i < gameObjectIDs.Length; i++)
         {
             GameObject gameObject = PhotonNetwork.GetPhotonView(gameObjectIDs[i]).gameObject;
-            //float additionSize = (size - (float)0.2)/2;
             gameObject.transform.localScale = new Vector3(size, size, size);
 
             if (gameObject.name == "SphereGhost" || gameObject.name == "CubeGhost")
@@ -121,18 +116,6 @@ public class InteractionModification : MonoBehaviour
 
     private void ChangeColliderSize(GameObject gameObject, float colliderSize) 
     {
-        //if(gameObject.name.StartsWith("Cube")) {
-        //    var boxCollider = gameObject.GetComponent<BoxCollider>();
-        //    boxCollider.size = new Vector3(colliderSize, colliderSize, colliderSize);
-        //} else if (gameObject.name.StartsWith("Sphere"))
-        //{
-        //    var sphereCollider = gameObject.GetComponent<SphereCollider>();
-        //    if (sphereCollider != null)
-        //    {
-        //        sphereCollider.radius = colliderSize;
-        //    }
-        //}
-
         var boxCollider = gameObject.GetComponent<BoxCollider>();
         boxCollider.enabled = true;
         boxCollider.size = new Vector3(colliderSize, colliderSize, colliderSize);

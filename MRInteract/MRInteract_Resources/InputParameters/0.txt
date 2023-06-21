@@ -1,0 +1,11 @@
+Input parameters for the scenario:
+
+Object Size: 0,2
+Object Distance: 0,5
+Collider Size: 1
+Gravity: False
+Kinematics: True
+Far Object Manipulation: True
+Collider Visibility: False
+Object Shape: Sphere
+

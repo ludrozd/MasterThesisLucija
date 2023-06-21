@@ -13,6 +13,7 @@ public class ReturnToMenu : MonoBehaviour
     private float distance;
     private float scale;
     private Quaternion rotation;
+    private string size;
 
     private void Start()
     {
@@ -61,7 +62,6 @@ public class ReturnToMenu : MonoBehaviour
 
         string path = Directory.GetCurrentDirectory();
         path += "\\MRInteract_Resources\\ObjectiveParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
-        //string path = "C:\\Users\\Korisnica\\Desktop\\MRInteract_Resources\\ObjectiveParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
         StreamWriter writer = new StreamWriter(path, true);
         writer.WriteLine("Objective parameters for the Pick And Place scenario:");
         writer.WriteLine();
@@ -76,12 +76,19 @@ public class ReturnToMenu : MonoBehaviour
         string timePassed = ts.Seconds.ToString();
         TextMeshProUGUI colorText = GameObject.Find("ColorText (TMP)").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI fontText = GameObject.Find("FontText (TMP)").GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI sizeText = GameObject.Find("SizeText (TMP)").GetComponent<TextMeshProUGUI>();
         string color = colorText.color.ToString();
         string font = fontText.font.name;
-        string size = sizeText.fontSize.ToString();
+        
+        if (PhotonNetwork.PlayerList[1].CustomProperties["text_size"] != null)
+        {
+            size = PhotonNetwork.PlayerList[1].CustomProperties["text_size"].ToString();
+        } else
+        {
+            TextMeshProUGUI sizeText = GameObject.Find("SizeText (TMP)").GetComponent<TextMeshProUGUI>();
+            size = sizeText.fontSize.ToString();
+        }
 
-        //string path = "C:\\Users\\Korisnica\\Desktop\\MRInteract_Resources\\ObjectiveParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
+
         string path = Directory.GetCurrentDirectory();
         path += "\\MRInteract_Resources\\ObjectiveParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
         StreamWriter writer = new StreamWriter(path, true);
@@ -117,7 +124,6 @@ public class ReturnToMenu : MonoBehaviour
         }
         Vector3 differenceEulerAngles = rotation.eulerAngles;
 
-        //string path = "C:\\Users\\Korisnica\\Desktop\\MRInteract_Resources\\ObjectiveParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
         string path = Directory.GetCurrentDirectory();
         path += "\\MRInteract_Resources\\ObjectiveParameters\\" + PhotonNetwork.CurrentRoom.Name + ".txt";
         StreamWriter writer = new StreamWriter(path, true);

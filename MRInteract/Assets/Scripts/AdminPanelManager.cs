@@ -5,7 +5,6 @@ using UnityEngine;
 public class AdminPanelManager : MonoBehaviour
 {
     public Canvas pcCanvas;
-    //public EventSystem eventSystem;
     void Start()
     {
 #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN

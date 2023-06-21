@@ -33,17 +33,30 @@ public class ChangeFontSize : MonoBehaviour
     {
         int textID = text.GetComponent<PhotonView>().ViewID;
         int sliderID = slider.GetComponent<PhotonView>().ViewID;
-        photonView.RPC("SyncSliderValue", RpcTarget.All, value, sliderID, textID);
+        //photonView.RPC("SyncSliderValue", RpcTarget.All, value, sliderID, textID);
+        SyncSliderValue(value, sliderID, textID);
     }
 
-    [PunRPC]
+    //[PunRPC]
     private void SyncSliderValue(float value, int sliderID, int textID)
     {
         Slider sliderObj = PhotonNetwork.GetPhotonView(sliderID).GetComponent<Slider>();
         sliderObj.value = value;
         TextMeshProUGUI textObj = PhotonNetwork.GetPhotonView(textID).GetComponent<TextMeshProUGUI>();
         textObj.fontSize = sliderObj.value;
+
+        var hash = PhotonNetwork.LocalPlayer.CustomProperties;
+        if (hash.ContainsKey("text_size"))
+        {
+            hash["text_size"] = sliderObj.value;
+        }
+        else
+        {
+            hash.Add("text_size", sliderObj.value);
+        }
+        PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
     }
+
 
     [PunRPC]
     private void ChangeMinMaxSlider(int minSliderID, int maxSliderID, int sliderID)

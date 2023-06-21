@@ -17,7 +17,6 @@ public class PanelCloser : MonoBehaviour
         if (PhotonNetwork.IsMasterClient)
         {
             int panelID = panel.GetComponent<PhotonView>().ViewID;
-            //Debug.Log(gameObjectIDs.Count);
             photonView.RPC("ClosePanel", RpcTarget.All, panelID);
         }
     }

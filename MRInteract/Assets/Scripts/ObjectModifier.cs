@@ -40,7 +40,6 @@ public class ObjectModifier : MonoBehaviour
 
         if (PhotonNetwork.IsMasterClient)
         {
-            //Debug.Log(gameObjectIDs.Count);
             photonView.RPC("ModifyManipulatedObjects", RpcTarget.All, objects, resizeInputField.text, ghostResizeInputField.text, transformZInputField.text, transformYInputField.text, rotateXInputField.text, rotateYInputField.text, colliderSizeInputField.text, shapeDropdown.options[shapeDropdown.value].text, farManipulationToggle.isOn, colliderToggle.isOn);
         }
     }
@@ -56,7 +55,6 @@ public class ObjectModifier : MonoBehaviour
         float yRotate = float.Parse(rotateYInput);
         float colliderSize = float.Parse(colliderSizeInput);
         string shapeName = shapeInput;
-        //Debug.Log("Dropdown value " + shapeName);
 
         for (int i = 0; i < gameobjectIDs.Length; i++)
         {
